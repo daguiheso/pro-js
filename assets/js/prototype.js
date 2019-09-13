@@ -5,10 +5,8 @@ const heroMethods = {
 }
 
 function Hero(name) {
-  const hero = {
-    name: name,
-    saludar: heroMethods.saludar
-  }
+  const hero = Object.create(heroMethods)
+  hero.name = name
 
   return hero
 }
