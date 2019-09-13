@@ -1,26 +1,19 @@
-const heroMethods = {
-	saludar: function() {
-		console.log(`Hola soy ${this.nombre}`)
-	}
+function Hero(name) {
+  const hero = {
+    name: name,
+    saludar: function() {
+      console.log(`Hola soy ${this.name}`)
+    }
+  }
+
+  return hero
 }
 
-const goku = {
-	nombre: 'Goku',
-	saludar: heroMethods.saludar
-}
-
+const goku = Hero('Goku')
 goku.saludar()
 
-const vegeta = {
-	nombre: 'Vegeta',
-	saludar: heroMethods.saludar
-}
-
+const vegeta = Hero('Vegeta')
 vegeta.saludar()
 
-const nubita = {
-	nombre: 'Nubita',
-	saludar: heroMethods.saludar
-}
-
+const nubita = Hero('Nubita')
 nubita.saludar()
