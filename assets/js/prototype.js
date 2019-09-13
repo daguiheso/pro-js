@@ -1,9 +1,13 @@
+const heroMethods = {
+  saludar: function() {
+    console.log(`Hola soy ${this.name}`)
+  }
+}
+
 function Hero(name) {
   const hero = {
     name: name,
-    saludar: function() {
-      console.log(`Hola soy ${this.name}`)
-    }
+    saludar: heroMethods.saludar
   }
 
   return hero
