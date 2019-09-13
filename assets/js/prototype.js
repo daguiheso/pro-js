@@ -1,19 +1,16 @@
 function Hero(name) {
-  const hero = Object.create(Hero.prototype)
-  hero.name = name
-
-  return hero
+  this.name = name
 }
 
 Hero.prototype.saludar = function() {
   console.log(`Hola soy ${this.name}`)
 }
 
-const goku = Hero('Goku')
+const goku = new Hero('Goku')
 goku.saludar()
 
-const vegeta = Hero('Vegeta')
+const vegeta = new Hero('Vegeta')
 vegeta.saludar()
 
-const nubita = Hero('Nubita')
+const nubita = new Hero('Nubita')
 nubita.saludar()
